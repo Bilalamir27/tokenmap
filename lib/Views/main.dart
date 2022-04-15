@@ -1,12 +1,12 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async{
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class MyHomePage extends StatefulWidget {
                     child:Opacity(
                         opacity: 0.4,
                         child:Image.asset('assets/background.jpg',
-                          fit: BoxFit.cover,
+
                         )
                     )
                 ),
