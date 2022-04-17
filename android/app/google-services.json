@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "426053084971",
+    "project_id": "tokenmap-c0b37",
+    "storage_bucket": "tokenmap-c0b37.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:426053084971:android:36b980550a9f6bb232876e",
+        "android_client_info": {
+          "package_name": "com.example.tokenmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "426053084971-5pvj6llk2g6imb62fmq24be3f7dppakq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT5NCxM8p57AydTuz44kzoM4f4tmXGvBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "426053084971-5pvj6llk2g6imb62fmq24be3f7dppakq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
