@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import 'package:tokenmap/Views/login.dart';
+
 void main() async{
   runApp(MyApp());
 }
@@ -40,16 +42,31 @@ class MyHomePage extends StatefulWidget {
           body:Container(
             color: Colors.black,
             child: Stack(
-              children: const [
+              children: [
                 Positioned.fill(
                     child:Opacity(
                         opacity: 0.4,
-                        child:Image(image: AssetImage('assets/background.jpg'),
-
+                        child:Image.asset('assets/background.jpg',
+                          fit: BoxFit.cover,
                         )
                     )
                 ),
+                Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(color: Colors.transparent,height: 75),
 
+                      Container(color: Colors.transparent,height: 50),
+                      ElevatedButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => LoginPage(title: '',)));
+                      },
+                          child: Text("Login",style: TextStyle(color: Colors.white,fontSize: 20))
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           )
