@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'package:tokenmap/Views/login.dart';
+import 'package:tokenmap/Views/signup.dart';
 
 void main() async{
   runApp(MyApp());
@@ -55,14 +56,18 @@ class MyHomePage extends StatefulWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Container(color: Colors.transparent,height: 75),
-
                       Container(color: Colors.transparent,height: 50),
                       ElevatedButton(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(
                             builder: (context) => LoginPage(title: '',)));
                       },
                           child: Text("Login",style: TextStyle(color: Colors.white,fontSize: 20))
+                      ),
+                      ElevatedButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => SigninPage(title: '',)));
+                      },
+                          child: Text("SignUp",style: TextStyle(color: Colors.white,fontSize: 20))
                       ),
                     ],
                   ),
