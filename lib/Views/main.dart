@@ -40,11 +40,11 @@ class MyHomePage extends StatefulWidget {
           body:Container(
             color: Colors.black,
             child: Stack(
-              children: [
+              children: const [
                 Positioned.fill(
                     child:Opacity(
                         opacity: 0.4,
-                        child:Image.asset('assets/background.jpg',
+                        child:Image(image: AssetImage('assets/background.jpg'),
 
                         )
                     )
