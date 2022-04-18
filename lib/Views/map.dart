@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class SigninPage extends StatefulWidget {
-  SigninPage({Key? key, required this.title}) : super(key: key);
+class MapPage extends StatefulWidget {
+  MapPage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  _SigninPageState createState() => _SigninPageState();
+  _MapPageState createState() => _MapPageState();
 }
 
-class _SigninPageState extends State<SigninPage> {
+class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
 
@@ -25,7 +25,7 @@ class _SigninPageState extends State<SigninPage> {
             ),
           ],
         ),
-      ), 
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
