@@ -20,12 +20,14 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            const TextField(
+                  decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'User Name',
             ),
-          ],
-        ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+          ),
+        ]),
+      ),
     );
   }
 }
