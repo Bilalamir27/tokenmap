@@ -149,7 +149,7 @@ class _SigninPageState extends State<SigninPage> {
                     InkWell(
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => MapPage(title: '',uid: '',)));
+                            builder: (context) => LoginPage(title: '',uid: '',)));
                       },
                       child: Text("If you already have an account?, press here to login",style: TextStyle(color: Colors.white),),
                     )
