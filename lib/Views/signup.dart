@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:tokenmap/Views/map.dart';
 import 'package:tokenmap/Views/navigation.dart';
 
 import 'login.dart';
@@ -42,6 +42,7 @@ class _SigninPageState extends State<SigninPage> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(color: Colors.transparent,height: 50),
+                    Text("Sign Up",style: TextStyle(color: Colors.white, fontSize: 40),),
                     Flexible(
                         child: Container(
                           margin: const EdgeInsets.all(10),
@@ -140,8 +141,6 @@ class _SigninPageState extends State<SigninPage> {
                               //   _emailAlert();
                               // }
                             }
-
-
                           },
                           child: Text("SIGNUP",style: TextStyle(color: Colors.white,fontSize: 20)),
                           //color: Colors.black12,
@@ -150,7 +149,7 @@ class _SigninPageState extends State<SigninPage> {
                     InkWell(
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => LoginPage(title: '')));
+                            builder: (context) => MapPage(title: '',uid: '',)));
                       },
                       child: Text("If you already have an account?, press here to login",style: TextStyle(color: Colors.white),),
                     )

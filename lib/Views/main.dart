@@ -60,6 +60,7 @@ class MyHomePage extends StatefulWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Container(color: Colors.transparent,height: 50),
+                      Text("Welcome",style: TextStyle(color: Colors.white, fontSize: 40),),
                       ElevatedButton(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(
                             builder: (context) => LoginPage(title: '',)));
