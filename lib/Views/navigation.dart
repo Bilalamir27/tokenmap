@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class NavigationPage extends StatefulWidget {
-  NavigationPage({Key? key, required this.title}) : super(key: key);
+  NavigationPage({Key? key, required this.title, required this.uid}) : super(key: key);
+  String uid;
   final String title;
 
   @override

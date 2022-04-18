@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 
 import 'package:tokenmap/Views/login.dart';
 import 'package:tokenmap/Views/signup.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -65,7 +68,7 @@ class MyHomePage extends StatefulWidget {
                       ),
                       ElevatedButton(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => SigninPage(title: '',)));
+                            builder: (context) => SigninPage(title: '',uid: '',)));
                       },
                           child: Text("SignUp",style: TextStyle(color: Colors.white,fontSize: 20))
                       ),
