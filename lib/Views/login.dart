@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:tokenmap/Views/account.dart';
 import 'package:tokenmap/Views/navigation.dart';
 
 import 'map.dart';
@@ -119,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
                             final result = await _auth.signInWithEmailAndPassword(email: email.toString().trim(), password: password.toString().trim());
                             if(result != null){
                               Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => MapPage(uid: result.user!.uid, title: '',)));
+                                  builder: (context) => AccountPage(uid: result.user!.uid, title: '',)));
                             }
                           }catch(e){
                             _signIn();
