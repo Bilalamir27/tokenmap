@@ -3,12 +3,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:tokenmap/Views/navigation.dart';
 
+import 'map.dart';
 import 'signup.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({Key? key, required this.title}) : super(key: key);
+  LoginPage({Key? key, required this.title, required this.uid}) : super(key: key);
   final String title;
-
+  String uid;
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -116,10 +117,10 @@ class _LoginPageState extends State<LoginPage> {
                         onPressed: () async{
                           try{
                             final result = await _auth.signInWithEmailAndPassword(email: email.toString().trim(), password: password.toString().trim());
-                            // if(result != null){
-                            //   Navigator.push(context, MaterialPageRoute(
-                            //       //builder: (context) => _signIn(uid: result.user.uid)));
-                            // }
+                            if(result != null){
+                              Navigator.push(context, MaterialPageRoute(
+                                  builder: (context) => MapPage(uid: result.user!.uid, title: '',)));
+                            }
                           }catch(e){
                             _signIn();
                           }

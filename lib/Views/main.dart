@@ -63,7 +63,7 @@ class MyHomePage extends StatefulWidget {
                       Text("Welcome",style: TextStyle(color: Colors.white, fontSize: 40),),
                       ElevatedButton(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => LoginPage(title: '',)));
+                            builder: (context) => LoginPage(title: '',uid: '',)));
                       },
                           child: Text("Login",style: TextStyle(color: Colors.white,fontSize: 20))
                       ),
