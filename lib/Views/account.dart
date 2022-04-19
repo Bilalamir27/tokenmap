@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:tokenmap/Views/map.dart';
 
 import 'main.dart';
 
@@ -42,19 +43,32 @@ class _AccountPageState extends State<AccountPage> {
         child: Column(
           children: [
             Container(color: Colors.transparent,height: 40),
+            Text("Account",style: TextStyle(color: Colors.white, fontSize: 40),),
             Container(
               child:CircleAvatar(
-                //backgroundImage: AssetImage("assets/noImage.jpg"),
+                backgroundImage: AssetImage("assets/avitar.jpg"),
                 radius: 70,
               ),
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(color: Colors.deepOrangeAccent,width: 2)
+                  border: Border.all(color: Colors.blue,width: 2)
               ),
             ),
-            Container(color: Colors.transparent,height: 100),
+            Container(color: Colors.transparent,height: 80),
             Container(
               child: _displayInfo(),
+            ),
+            Text("Token Count: 1",style: TextStyle(color: Colors.white, fontSize: 20),),
+            Container(color: Colors.transparent,height: 30),
+            SizedBox(
+              width: 250,
+              child:  ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => MapPage(title: '',uid: '',)));
+                  },
+                  child: const Text("Map",style: TextStyle(color: Colors.white))
+              ),
             ),
             SizedBox(
               width: 250,
@@ -66,25 +80,6 @@ class _AccountPageState extends State<AccountPage> {
                   child: const Text("Logout",style: TextStyle(color: Colors.white))
               ),
             ),
-            // SizedBox(
-            //   width: 250,
-            //   child:  ElevatedButton(
-            //       onPressed: () async{
-            //         try{
-            //           final result = await _auth.currentUser;
-            //           result.delete();
-            //           userC.doc(widget.uid).delete();
-            //           userI.doc(widget.uid).delete();
-            //           Navigator.push(context, MaterialPageRoute(
-            //               builder: (context) => MyHomePage(uid: result.user!.uid, title: '',)));
-            //
-            //         }catch(e){
-            //           print('not deleted');
-            //         }
-            //       },
-            //       child: Text("Delete Account",style: TextStyle(color: Colors.white))
-            //   ),
-            // )
           ],
         ),
       ),

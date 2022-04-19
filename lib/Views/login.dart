@@ -60,6 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(color: Colors.transparent,height: 20),
+                  Text("Login",style: TextStyle(color: Colors.white, fontSize: 40),),
                   Flexible(
                       child: Container(
                         margin: const EdgeInsets.all(10),

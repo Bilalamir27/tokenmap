@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:tokenmap/Views/account.dart';
 import 'package:tokenmap/Views/map.dart';
-import 'package:tokenmap/Views/navigation.dart';
+
 
 import 'login.dart';
 
@@ -134,7 +135,7 @@ class _SigninPageState extends State<SigninPage> {
                                     "email" : email,
                                     "name" : name,
                                   });
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => MapPage(uid: '', title: '',)));
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => AccountPage(uid: result.user!.uid, title: '',)));
                                 }
                               // }
                               // catch(e){

@@ -59,8 +59,9 @@ class MyHomePage extends StatefulWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Container(color: Colors.transparent,height: 50),
-                      Text("Welcome",style: TextStyle(color: Colors.white, fontSize: 40),),
+                      Container(color: Colors.transparent,height: 90),
+                      Text("Token Map",style: TextStyle(color: Colors.white, fontSize: 40),),
+                      Container(color: Colors.transparent,height: 200),
                       ElevatedButton(onPressed: (){
                         Navigator.push(context, MaterialPageRoute(
                             builder: (context) => LoginPage(title: '',uid: '',)));
