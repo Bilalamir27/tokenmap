@@ -134,7 +134,7 @@ class _SigninPageState extends State<SigninPage> {
                                     "email" : email,
                                     "name" : name,
                                   });
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => NavigationPage(uid: result.user!.uid, title: '',)));
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => MapPage(uid: '', title: '',)));
                                 }
                               // }
                               // catch(e){
