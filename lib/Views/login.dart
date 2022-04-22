@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:tokenmap/Views/account.dart';
-import 'package:tokenmap/Views/navigation.dart';
 
 import 'map.dart';
 import 'signup.dart';
